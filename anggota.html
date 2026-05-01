@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>9AMAZON - Kelas 9A</title>
+  <style>
+  *{  
+    -webkit-tap-highlight-color: transparent;  
+  }  
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea;
+  }
+
+  /* HEADER */
+  .header {
+    background-color: #1e2be0;
+    color: white;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+  }
+
+  .header h1 {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .header p {
+    margin: 5px 0 0;
+    font-size: 12px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-left: -5px;
+    border-right: 1px solid white;
+    padding-right: 1px;
+    margin-right: 10px;
+  }
+
+  /* NAV */
+  .nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+    border: 1px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 300px;
+    background: white;
+    padding: 4px; /* ini penting */
+  }
+
+  .nav a {
+    flex: 1;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  /* SLIDER */
+  .slider {
+    top: 4px;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    background: #1e2be0;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    z-index: 0;
+  }
+
+  .nav a.active {
+    color: white;
+  }
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.footer {
+  background: #333;
+  color: #ccc;
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 40px;
+}
+
+.footer-menu {
+  font-size: 13px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.footer-social {
+  margin-bottom: 20px;
+}
+
+.footer-social span {
+  font-size: 22px;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-social span:hover {
+  color: white;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #aaa;
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social a {
+  font-size: 28px;
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* JARAK ICON */
+.footer-social a:first-child {
+  margin-right: 15px;
+}
+
+.footer-social a:last-child {
+  margin-left: 15px;
+}
+
+/* PEMISAH | */
+.divider {
+  color: #aaa;
+  font-size: 20px;
+}
+
+/* HOVER */
+.footer-social a:hover {
+  transform: scale(1.2);
+}
+
+.footer-social a:hover .fa-instagram {
+  color: #E1306C;
+}
+
+.footer-social a:hover .fa-tiktok {
+  color: #00f2ea;
+}
+.anggota-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.jabatan {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #1e2be0;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  color: #1e2be0;
+  font-size: 10px;
+}
+
+.card {
+  border: 2px solid #1e2be0;
+  width: 100px;
+  margin: auto;
+  background: white;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.nama {
+  border-top: 2px solid #1e2be0;
+  padding: 5px;
+  font-size: 10px;
+  color: #1e2be0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.anggota-item {
+  text-align: center;
+}
+
+.center {
+  margin-bottom: 20px;
+}
+
+.btn-anggota {
+  margin: 30px auto;
+  width: 80%;
+  background: #1e2be0;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+.all-anggota {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.anggota-card {
+  width: 120px;
+  border: 2px solid #1e2be0;
+  background: white;
+}
+
+.anggota-card img {
+  width: 100%;
+}
+
+.nama {
+  border-top: 2px solid #1e2be0;
+  padding: 5px;
+  font-size: 12px;
+  color: #1e2be0;
+}
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <img src="/Asset/SMPn 8.png" class="logo">
+  <div>
+    <h1>9AMAZON</h1>
+    <p>OFFICIAL WEBSITE KELAS 9A</p>
+  </div>
+</div>
+
+<div class="nav">
+  <div class="slider"></div>
+  <a data-href="9Amazon.html">About</a>
+  <a data-href="kegiatan.html">Kegiatan</a>
+  <a data-href="anggota.html"class="active">Anggota</a>
+</div>
+
+<div class="anggota-container">
+
+  <!-- WALI KELAS -->
+  <div class="anggota-item center">
+    <div class="jabatan">Wali Kelas</div>
+    <div class="card">
+      <img src="/Asset/Anggota/Ali_Yahya_S.kom.jpg">
+      <div class="nama">Ali Yahya S.Kom</div>
+    </div>
+  </div>
+
+  <!-- KETUA & WAKIL -->
+  <div class="row">
+    <div class="anggota-item">
+      <div class="jabatan">Ketua Kelas</div>
+      <div class="card">
+        <img src="/Asset/Anggota/Hasby_Ali_Mubarak.jpg">
+        <div class="nama">Hasby Ali-Mubarak</div>
+      </div>
+    </div>
+
+    <div class="anggota-item">
+      <div class="jabatan">Wakil Ketua Kelas</div>
+      <div class="card">
+        <img src="/Asset/Anggota/Alyanis_Elshabrina.jpg">
+        <div class="nama">Alyanis Elshabrina</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEKRETARIS & BENDAHARA -->
+  <div class="row">
+    <div class="anggota-item">
+      <div class="jabatan">Sekretaris 2</div>
+      <div class="card">
+        <img src="/Asset/Anggota/Adelia_Putri_Ergita.jpg">
+        <div class="nama">Adelia Putri Ergita</div>
+      </div>
+    </div>
+
+    <div class="anggota-item">
+      <div class="jabatan">Bendahara 1</div>
+      <div class="card">
+        <img src="/Asset/Anggota/Ersa_Mariska.jpg">
+        <div class="nama">Ersa Mariska</div>
+      </div>
+    </div>
+
+    <div class="anggota-item">
+      <div class="jabatan">Sekretaris 1</div>
+      <div class="card">
+        <img src="/Asset/Anggota/Fatir_Nur_Rizqi.jpg">
+        <div class="nama">Fatir Nur Rizqi</div>
+      </div>
+    </div>
+
+    <div class="anggota-item">
+      <div class="jabatan">Sekretaris 2</div>
+      <div class="card">
+        <img src="/Asset/Anggota/Tiara_Isabelle.jpg">
+        <div class="nama">Tiara Isabelle</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- BUTTON -->
+  <div class="btn-anggota">
+    SEMUA ANGGOTA KELAS 9A
+  </div>
+<div class="all-anggota" id="listAnggota"></div>
+</div>
+
+<footer class="footer">
+  <div class="footer-menu">
+   About | Anggota | Kegiatan 
+  </div>
+
+<div class="footer-social">
+  <a href="https://www.instagram.com/9aamaz0n.e?igsh=MWJnN2VpaWZocWhmZw==/USERNAME_KAMU" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+
+  <div class="footer-copy">
+    Copyright © 2026 9AMAZON Class. All Rights Reserved
+  </div>
+</footer>
+<script>
+const tabs = document.querySelectorAll(".nav a");
+const slider = document.querySelector(".slider");
+const nav = document.querySelector(".nav");
+
+function updateSlider(tab) {
+  const navRect = nav.getBoundingClientRect();
+  const tabRect = tab.getBoundingClientRect();
+  const left = tabRect.left - navRect.left;
+
+  slider.style.width = tabRect.width + "px";
+  slider.style.transform = `translateX(${left}px)`;
+}
+
+// posisi awal
+updateSlider(document.querySelector(".nav a.active"));
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    updateSlider(tab);
+
+    // delay pindah halaman
+    setTimeout(() => {
+      window.location.href = tab.dataset.href;
+    }, 300);
+  });
+});
+</script>
+<script>
+const anggota = [
+  "Adelia Putri Ergita",
+  "Alyanis Elshabrina",
+  "Ersa Mariska",
+  "Fatir Nur Rizqi",
+  "Hasby Ali Mubarak",
+  "Tiara Isabelle",
+  "Alyanis Ergita"
+];
+
+// 🔥 urutkan abjad
+anggota.sort();
+
+// 🔥 ambil container
+const container = document.getElementById("listAnggota");
+
+// 🔥 generate otomatis
+anggota.forEach(nama => {
+
+  // ubah nama jadi format file (spasi -> - dan lowercase)
+  let file = nama.toLowerCase().replace(/ /g, "-");
+
+  container.innerHTML += `
+    <div class="anggota-card">
+      <img src="/Asset/Anggota/${file}.jpg">
+      <div class="nama">${nama}</div>
+    </div>
+  `;
+});
+</script>
+</body>
+</html>
