@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>9AMAZON - Kelas 9A</title>
+  <style>
+  *{  
+    -webkit-tap-highlight-color: transparent;  
+  }  
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea;
+  }
+
+  /* HEADER */
+  .header {
+    background-color: #1e2be0;
+    color: white;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+  }
+
+  .header h1 {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .header p {
+    margin: 5px 0 0;
+    font-size: 12px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-left: -5px;
+    border-right: 1px solid white;
+    padding-right: 1px;
+    margin-right: 10px;
+  }
+
+  /* NAV */
+  .nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+    border: 1px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 300px;
+    background: white;
+    padding: 4px; /* ini penting */
+  }
+
+  .nav a {
+    flex: 1;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  /* SLIDER */
+  .slider {
+    top: 4px;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    background: #1e2be0;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    z-index: 0;
+  }
+
+  .nav a.active {
+    color: white;
+  }
+
+  /* IMAGE */
+  .image-container {
+    text-align: center;
+  }
+
+  .image-container img {
+    width: 80%;
+    border: 5px solid #1e2be0;
+  }
+
+  /* CONTENT */
+  .content-box {
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    border: 3px solid #1e2be0;
+    border-radius: 15px;
+    background-color: white;
+    min-height: 200px;
+  }
+  .slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: slide 10s linear infinite;
+}
+
+.slider-track img {
+  width: 200px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.footer {
+  background: #333;
+  color: #ccc;
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 40px;
+}
+
+.footer-menu {
+  font-size: 13px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.footer-social {
+  margin-bottom: 20px;
+}
+
+.footer-social span {
+  font-size: 22px;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-social span:hover {
+  color: white;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #aaa;
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social a {
+  font-size: 28px;
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* JARAK ICON */
+.footer-social a:first-child {
+  margin-right: 15px;
+}
+
+.footer-social a:last-child {
+  margin-left: 15px;
+}
+
+/* PEMISAH | */
+.divider {
+  color: #aaa;
+  font-size: 20px;
+}
+
+/* HOVER */
+.footer-social a:hover {
+  transform: scale(1.2);
+}
+
+.footer-social a:hover .fa-instagram {
+  color: #E1306C;
+}
+
+.footer-social a:hover .fa-tiktok {
+  color: #00f2ea;
+}
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <img src="/Asset/SMPn 8.png" class="logo">
+  <div>
+    <h1>9AMAZON</h1>
+    <p>OFFICIAL WEBSITE KELAS 9A</p>
+  </div>
+</div>
+
+<div class="nav">
+  <div class="slider"></div>
+  <a data-href="index.html" class="active">About</a>
+  <a data-href="kegiatan.html">Kegiatan</a>
+  <a data-href="anggota.html">Anggota</a>
+</div>
+
+<div class="slider-wrapper">
+  <div class="slider-track">
+    <img src="/Asset/About/8.jpg">
+    <img src="/Asset/About/Lomba.jpg">
+    <img src="/Asset/About/Lomba1.jpg">
+
+    <!-- DUPLIKAT -->
+    <img src="/Asset/About/8.jpg">
+    <img src="/Asset/About/Lomba1.jpg">
+    <img src="/Asset/About/Lomba.jpg">
+  </div>
+</div>
+<!-- CONTENT -->
+<div class="content-box">
+  <h2>About Kelas 9A</h2>
+  <p>
+‎Kelas 9A adalah tempat berkumpulnya berbagai karakter, cerita, dan mimpi dalam satu ruang yang penuh warna. Kami mungkin berbeda dalam sifat, cara berpikir, dan kebiasaan, tapi justru perbedaan itu yang membuat 9A jadi istimewa.
+  </p>
+  <p>
+‎Di kelas ini, ada tawa yang selalu pecah, kerja sama yang terus dibangun, dan kenangan yang tercipta setiap harinya. Dari belajar bersama, bercanda saat jam kosong, sampai saling mendukung di masa-masa sulit, semua jadi bagian dari perjalanan kami.
+  </p>
+    <p>
+9A bukan sekadar nama kelas, tapi keluarga kecil yang tumbuh bersama, belajar bersama, dan berjuang bersama menuju masa depan. Dengan semangat, kekompakan, dan cerita yang tak terlupakan, kami percaya setiap langkah di kelas ini akan menjadi kenangan berharga.
+  </p>
+  <b>9A — SEHAT , KUAT , JAYA.</b>
+</div>
+<footer class="footer">
+  <div class="footer-menu">
+   About | Anggota | Kegiatan 
+  </div>
+
+<div class="footer-social">
+  <a href="https://www.instagram.com/9aamaz0n.e?igsh=MWJnN2VpaWZocWhmZw==/USERNAME_KAMU" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+
+  <div class="footer-copy">
+    Copyright © 2026 9AMAZON Class. All Rights Reserved
+  </div>
+</footer>
+<script>
+const tabs = document.querySelectorAll(".nav a");
+const slider = document.querySelector(".slider");
+const nav = document.querySelector(".nav");
+
+function updateSlider(tab) {
+  const navRect = nav.getBoundingClientRect();
+  const tabRect = tab.getBoundingClientRect();
+  const left = tabRect.left - navRect.left;
+
+  slider.style.width = tabRect.width + "px";
+  slider.style.transform = `translateX(${left}px)`;
+}
+
+// posisi awal
+updateSlider(document.querySelector(".nav a.active"));
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    updateSlider(tab);
+
+    // delay pindah halaman
+    setTimeout(() => {
+      window.location.href = tab.dataset.href;
+    }, 300);
+  });
+});
+</script>
+
+</body>
+</html>
